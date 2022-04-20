@@ -16,8 +16,13 @@ public class Stock{
 		showInfo(list);
 	}
 	static void showInfo(ArrayList<Stocks>list){
+		int count=0;
 		for(Stocks s:list){
-			s.showInfo();
+			if(count++==0){
+				s.showInfo2();
+			}else{
+				s.showInfo();
+			}
 		}
 	}
 }
@@ -25,12 +30,15 @@ class Stocks{
 	String code;
 	String name;
 	String lastPrice;
-		Stocks(String code,String name,String lastPrice){
-			this.code=code;
-			this.name=name;
-			this.lastPrice=lastPrice;
-		}
+	Stocks(String code,String name,String lastPrice){
+		this.code=code;
+		this.name=name;
+		this.lastPrice=lastPrice;
+	}
 	void showInfo(){
 		System.out.printf("%s %s %s %n",this.code,this.name,this.lastPrice);
+	}
+	void showInfo2(){
+		System.out.printf("%s,%s,%s%n",this.code,this.name,this.lastPrice);
 	}
 }
