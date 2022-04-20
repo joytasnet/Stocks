@@ -10,7 +10,7 @@ public class StocksApp{
 
 		String line;
 		while((line=br.readLine())!=null){
-				String[] param = line.split(",");//カンマ区切りで読み込み
+				String[] param = line.split(",",-1);//カンマ区切りで読み込み
 				Stocks s = new Stocks(param[0],param[1],param[2]);//インスタンス生成
 				stocksList.add(s);//リストに追加
 		}
