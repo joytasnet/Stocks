@@ -13,7 +13,8 @@ public class StockApp{
 		String line;
 		while((line = br.readLine()) != null){
 			String[] params=line.split(",",-1);
-			Stock p = new Stock(params[0],params[1],String.valueOf(params[6]));
+			//Stock p = new Stock(params[0],params[1],String.valueOf(params[6]));
+			Stock p = new Stock(params[0],params[1],params[6]);
 			list.add(p);
 		}
 		br.close();
