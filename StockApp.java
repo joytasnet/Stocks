@@ -6,7 +6,6 @@ public class StockApp{
 		FileInputStream fis = new FileInputStream("stocks_2017-08-16.csv");
 		InputStreamReader isr=new InputStreamReader(fis,"utf-8");
 		BufferedReader br = new BufferedReader(isr);
-		String labels=br.readLine();
 		String line;
 		while((line=br.readLine()) != null){
 			String[] params=line.split(",");
@@ -14,7 +13,6 @@ public class StockApp{
 			list.add(s);
 		}
 		br.close();
-		System.out.println(labels);
 		show(list);
 	}
 	static void show(ArrayList<Stock> list){
